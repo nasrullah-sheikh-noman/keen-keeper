@@ -11,7 +11,7 @@ const Navbar = () => {
         <div className="container mx-auto ">
           <div className="navbar-start">
             <a className="btn btn-ghost text-3xl font-bold gap-0 text-center items-center">
-              <span className="text-3xl font-extrabold text-blue-500">
+              <span className="text-3xl font-extrabold text-[#47698F]">
                 keen
               </span>
               keeper
