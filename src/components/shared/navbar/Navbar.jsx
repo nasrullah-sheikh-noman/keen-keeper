@@ -2,7 +2,7 @@ import { ImStatsDots } from "react-icons/im";
 
 import { RiTimeLine } from "react-icons/ri";
 import { AiFillHome } from "react-icons/ai";
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 
 const Navbar = () => {
   return (
@@ -23,7 +23,7 @@ const Navbar = () => {
               <div
                 tabIndex={0}
                 role="button"
-                className="btn btn-ghost lg:hidden"
+                className="btn btn-ghost sm:hidden"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -47,54 +47,78 @@ const Navbar = () => {
                py-2 shadow items-end"
               >
                 <div className="navbar-end gap-2 flex-col items-end">
-                  <Link
+                  <NavLink
                     to="/"
-                    className="btn bg-[#47698F] text-white border-[#35567b]"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "btn bg-[#47698F] text-white border-[#35567b]"
+                        : "btn border-black"
+                    }
                   >
                     <AiFillHome />
                     Home
-                  </Link>
-                  <Link
+                  </NavLink>
+                  <NavLink
                     to="/timeline"
-                    className="btn bg-[#47698F] text-white border-[#35567b]"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "btn bg-[#47698F] text-white border-[#35567b]"
+                        : "btn border-black"
+                    }
                   >
                     <RiTimeLine />
                     Timeline
-                  </Link>
-                  <Link
+                  </NavLink>
+                  <NavLink
                     to="/stats"
-                    className="btn bg-[#47698F] text-white border-[#35567b]"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "btn bg-[#47698F] text-white border-[#35567b]"
+                        : "btn border-black"
+                    }
                   >
                     <ImStatsDots />
                     Stats
-                  </Link>
+                  </NavLink>
                 </div>
               </ul>
             </div>
 
-            <div className="navbar-end hidden lg:flex">
+            <div className="navbar-end hidden sm:flex">
               <div className="navbar-end gap-2">
-                <Link
+                <NavLink
                   to="/"
-                  className="btn bg-[#47698F] text-white border-[#35567b]"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "btn bg-[#47698F] text-white border-[#35567b]"
+                      : "btn border-black"
+                  }
                 >
                   <AiFillHome />
                   Home
-                </Link>
-                <Link
+                </NavLink>
+                <NavLink
                   to="/timeline"
-                  className="btn bg-[#47698F] text-white border-[#35567b]"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "btn bg-[#47698F] text-white border-[#35567b]"
+                      : "btn border-black"
+                  }
                 >
                   <RiTimeLine />
                   Timeline
-                </Link>
-                <Link
+                </NavLink>
+                <NavLink
                   to="/stats"
-                  className="btn bg-[#47698F] text-white border-[#35567b]"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "btn bg-[#47698F] text-white border-[#35567b]"
+                      : "btn border-black"
+                  }
                 >
                   <ImStatsDots />
                   Stats
-                </Link>
+                </NavLink>
               </div>
             </div>
           </div>
