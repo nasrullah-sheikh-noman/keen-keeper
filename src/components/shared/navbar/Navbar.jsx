@@ -1,4 +1,3 @@
-import React from "react";
 import { ImStatsDots } from "react-icons/im";
 
 import { RiTimeLine } from "react-icons/ri";
@@ -11,8 +10,11 @@ const Navbar = () => {
       <div className=" navbar bg-base-100 shadow-sm">
         <div className="container mx-auto ">
           <div className="navbar-start">
-            <a className="btn btn-ghost text-3xl font-bold gap-0">
-              <span className="text-4xl font-extrabold ">keen</span>keeper
+            <a className="btn btn-ghost text-3xl font-bold gap-0 text-center items-center">
+              <span className="text-3xl font-extrabold text-blue-500">
+                keen
+              </span>
+              keeper
             </a>
           </div>
 
@@ -46,38 +48,53 @@ const Navbar = () => {
               >
                 <div className="navbar-end gap-2 flex-col items-end">
                   <Link
-                  to= "/home"
-                    
-                   className="btn bg-[#47698F] text-white border-[#35567b]">
+                    to="/"
+                    className="btn bg-[#47698F] text-white border-[#35567b]"
+                  >
                     <AiFillHome />
                     Home
                   </Link>
-                  <button className="btn bg-[#47698F] text-white border-[#35567b]">
+                  <Link
+                    to="/timeline"
+                    className="btn bg-[#47698F] text-white border-[#35567b]"
+                  >
                     <RiTimeLine />
                     Timeline
-                  </button>
-                  <button className="btn bg-[#47698F] text-white border-[#35567b]">
+                  </Link>
+                  <Link
+                    to="/stats"
+                    className="btn bg-[#47698F] text-white border-[#35567b]"
+                  >
                     <ImStatsDots />
                     Stats
-                  </button>
+                  </Link>
                 </div>
               </ul>
             </div>
 
             <div className="navbar-end hidden lg:flex">
               <div className="navbar-end gap-2">
-                <button className="btn bg-[#47698F] text-white border-[#35567b]">
+                <Link
+                  to="/"
+                  className="btn bg-[#47698F] text-white border-[#35567b]"
+                >
                   <AiFillHome />
                   Home
-                </button>
-                <button className="btn bg-[#47698F] text-white border-[#35567b]">
+                </Link>
+                <Link
+                  to="/timeline"
+                  className="btn bg-[#47698F] text-white border-[#35567b]"
+                >
                   <RiTimeLine />
                   Timeline
-                </button>
-                <button className="btn bg-[#47698F] text-white border-[#35567b]">
+                </Link>
+                <Link
+                  to="/stats"
+                  className="btn bg-[#47698F] text-white border-[#35567b]"
+                >
                   <ImStatsDots />
                   Stats
-                </button>
+                </Link>
               </div>
             </div>
           </div>

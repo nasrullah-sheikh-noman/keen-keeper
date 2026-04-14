@@ -3,6 +3,7 @@ import Mainlayout from "../layout/Mainlayout";
 import Home from "../pages/home/Home";
 import Timeline from "../pages/timeline/Timeline";
 import Stats from "../pages/stats/Stats";
+import Errorpage from "../pages/errorpage/Errorpage";
 
 export const router = createBrowserRouter([
   {
@@ -22,5 +23,6 @@ export const router = createBrowserRouter([
         Component: Stats,
       }
     ],
+    errorElement: <Errorpage/>,
   },
 ]);
