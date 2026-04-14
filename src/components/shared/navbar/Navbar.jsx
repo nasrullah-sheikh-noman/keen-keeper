@@ -3,6 +3,7 @@ import { ImStatsDots } from "react-icons/im";
 import { RiTimeLine } from "react-icons/ri";
 import { AiFillHome } from "react-icons/ai";
 import { Link, NavLink } from "react-router";
+import { toast } from "react-toastify";
 
 const Navbar = () => {
   return (
@@ -11,8 +12,14 @@ const Navbar = () => {
         <div className="container mx-auto flex items-center text-center ">
           <div className="navbar-start">
             <NavLink
-            to="/"
-            className=" text-3xl font-bold gap-0 text-center items-center">
+              to="/"
+              onClick={() => {
+                toast.success("You are now on the homepage.", {
+                  position: "bottom-right",
+                });
+              }}
+              className=" text-3xl font-bold gap-0 text-center items-center"
+            >
               <span className="text-3xl font-extrabold text-cyan-600">
                 keen
               </span>
@@ -51,6 +58,11 @@ const Navbar = () => {
                 <div className="navbar-end gap-2 flex-col items-end">
                   <NavLink
                     to="/"
+                    onClick={() => {
+                      toast.success("You are now on the homepage.", {
+                        position: "bottom-right",
+                      });
+                    }}
                     className={({ isActive }) =>
                       isActive
                         ? "btn bg-[#47698F] text-white border-[#35567b] hover:scale-105 transition duration-400"
@@ -62,6 +74,11 @@ const Navbar = () => {
                   </NavLink>
                   <NavLink
                     to="/timeline"
+                    onClick={() => {
+                      toast.success("You are now on the TimeLine page.", {
+                        position: "bottom-right",
+                      });
+                    }}
                     className={({ isActive }) =>
                       isActive
                         ? "btn bg-[#47698F] text-white border-[#35567b] hover:scale-105 transition duration-400"
@@ -73,6 +90,11 @@ const Navbar = () => {
                   </NavLink>
                   <NavLink
                     to="/stats"
+                    onClick={() => {
+                      toast.success("You are now on the Stats page.", {
+                        position: "bottom-right",
+                      });
+                    }}
                     className={({ isActive }) =>
                       isActive
                         ? "btn bg-[#47698F] text-white border-[#35567b] hover:scale-105 transition duration-400"
@@ -90,6 +112,11 @@ const Navbar = () => {
               <div className="navbar-end gap-2">
                 <NavLink
                   to="/"
+                  onClick={() => {
+                      toast.success("You are now on the  Home page.", 
+                        {position: "bottom-right",}
+                      );
+                    }}
                   className={({ isActive }) =>
                     isActive
                       ? "btn bg-[#47698F] text-white border-[#35567b] hover:scale-105 transition duration-400"
@@ -101,6 +128,11 @@ const Navbar = () => {
                 </NavLink>
                 <NavLink
                   to="/timeline"
+                  onClick={() => {
+                      toast.success("You are now on the TimeLine page.", 
+                        {position: "bottom-right",}
+                      );
+                    }}
                   className={({ isActive }) =>
                     isActive
                       ? "btn bg-[#47698F] text-white border-[#35567b] hover:scale-105 transition duration-400"
@@ -112,6 +144,11 @@ const Navbar = () => {
                 </NavLink>
                 <NavLink
                   to="/stats"
+                  onClick={() => {
+                      toast.success("You are now on the Stats page.", 
+                        {position: "bottom-right",}
+                      );
+                    }}
                   className={({ isActive }) =>
                     isActive
                       ? "btn bg-[#47698F] text-white border-[#35567b] hover:scale-105 transition duration-400"

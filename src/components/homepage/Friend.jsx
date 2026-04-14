@@ -1,11 +1,18 @@
 import React from "react";
 import { Link, NavLink } from "react-router";
+import { toast } from "react-toastify";
 
 const Friend = ({ friend }) => {
   return (
     <Link
-    to={`/frienddetails/${friend.id}`}
-     className="border my-4 mx-1 border-gray-300 shadow-cyan-400 shadow-lg hover:scale-105  hover:shadow-2xl transition transform duration-300 px-6 py-8 flex flex-col items-center text-center space-y-3 rounded-lg">
+      to={`/frienddetails/${friend.id}`}
+      onClick={() => {
+        toast.success(`You are now on the ${friend.name} details page.`, {
+          position: "bottom-right",
+        });
+      }}
+      className="border my-4 mx-1 border-gray-300 shadow-cyan-400 shadow-lg hover:scale-105  hover:shadow-2xl transition transform duration-300 px-6 py-8 flex flex-col items-center text-center space-y-3 rounded-lg"
+    >
       <img className="rounded-full mx-auto" src={friend.avatar} alt="" />
       <h2 className="text-2xl font-semibold">{friend.name}</h2>
       <h3 className="text-gray-500 text-base">

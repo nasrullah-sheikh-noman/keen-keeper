@@ -4,7 +4,7 @@ const Yourfriendscount = () => {
   return (
     <div className='container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4'>
       <div className='border hover:scale-105 transition duration-400 hover:shadow-xl border-gray-400 shadow-cyan-400 shadow-md px-5 py-12 items-center text-center space-y-3 rounded-lg'>
-        <h1 className='text-4xl font-bold'>10</h1>
+        <h1 className='text-4xl font-bold'>16</h1>
         <h2 className='text-gray-500'>Total Friends</h2>
       </div>
       <div className='border hover:scale-105 transition duration-400 hover:shadow-xl border-gray-400 shadow-cyan-400 shadow-md px-5 py-12 items-center text-center space-y-3 rounded-lg'>

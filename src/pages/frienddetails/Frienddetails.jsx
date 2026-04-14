@@ -12,8 +12,6 @@ const Frienddetails = () => {
   const { id } = useParams();
 
   const friends = use(friendsPromise);
-  // const friend = useLoaderData();
-  // console.log("frind", friend);
 
   const expectedfriend = friends.find((friend) => friend.id == id);
   // console.log("expectedfriend", expectedfriend);
@@ -42,26 +40,26 @@ const Frienddetails = () => {
         </div>
 
         <div className="row-span-1 grid grid-rows-3 gap-3">
-          <div className="border rounded-2xl bg-gray-50 border-gray-300 flex items-center text-center justify-center text-lg font-medium gap-2">
+          <Link className="border rounded-2xl bg-gray-50 border-gray-300 flex items-center text-center justify-center text-lg font-medium gap-2">
             <span>
               <MdOutlineNotificationsPaused />
             </span>
             Snooze <span>{expectedfriend.actions.snooze}</span>
-          </div>
+          </Link>
 
-          <div className="border rounded-2xl bg-gray-50 border-gray-300 flex items-center text-center justify-center text-lg font-medium gap-2">
+          <Link className="border rounded-2xl bg-gray-50 border-gray-300 flex items-center text-center justify-center text-lg font-medium gap-2">
             <span>
               <HiMiniArchiveBoxArrowDown />
             </span>
             <span>{expectedfriend.actions.archive ? "Archive" : ""}</span>
-          </div>
+          </Link>
 
-          <div className="border rounded-2xl bg-gray-50 border-gray-300 flex items-center text-center justify-center text-lg font-medium gap-2">
+          <Link className="border rounded-2xl bg-gray-50 border-gray-300 flex items-center text-center justify-center text-lg font-medium gap-2">
             <span>
               <MdDeleteForever />
             </span>
             <span>{expectedfriend.actions.delete ? "Delete" : ""}</span>
-          </div>
+          </Link>
         </div>
       </div>
 
@@ -93,7 +91,7 @@ const Frienddetails = () => {
               <h2 className="text-lg font-medium ">
                 {expectedfriend.relationshipGoal.title}
               </h2>
-              <Link className="btn btn-ghost">Edit</Link>
+              <Link className="btn btn-ghost border border-black">Edit</Link>
             </div>
 
             <h2 className="text-gray-500 flex text-center items-center justify-start w-full gap-2">
@@ -110,24 +108,24 @@ const Frienddetails = () => {
           <h2 className="text-lg font-medium">Quick Check-In</h2>
           <div className="grid grid-cols-3 gap-4">
 
-            <h2 className="flex border border-gray-300 p-4 bg-gray-100 rounded-2xl flex-col items-center py-6">
+            <Link className="flex border border-gray-300 p-4 bg-gray-100 rounded-2xl flex-col items-center py-6">
               <span>
                 <FiPhoneCall />
               </span>
               {expectedfriend.quickActions.Call}
-            </h2>
+            </Link>
 
-            <h2 className="flex border border-gray-300 p-4 bg-gray-100 rounded-2xl flex-col items-center py-6">
+            <Link className="flex border border-gray-300 p-4 bg-gray-100 rounded-2xl flex-col items-center py-6">
               <IoMdText />
               {expectedfriend.quickActions.Text}
-            </h2>
+            </Link>
 
-            <h2 className="flex border border-gray-300 p-4 bg-gray-100 rounded-2xl flex-col items-center py-6">
+            <Link className="flex border border-gray-300 p-4 bg-gray-100 rounded-2xl flex-col items-center py-6">
               <span>
                 <FaVideo />
               </span>
               {expectedfriend.quickActions.Video}
-            </h2>
+            </Link>
           </div>
         </div>
       </div>
