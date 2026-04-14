@@ -16,16 +16,17 @@ export const router = createBrowserRouter([
         Component: Home,
       },
       {
-        path: "timeline",
+        path: "/timeline",
         Component: Timeline,
       },
       {
-        path: "stats",
+        path: "/stats",
         Component: Stats,
       },
       {
-        path: "frienddetails",
+        path: "/frienddetails/:id",
         Component: Frienddetails,
+        // loader: () => fetch("/data.json"),
       }
     ],
     errorElement: <Errorpage/>,

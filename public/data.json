@@ -8,8 +8,8 @@
     "note": "Former colleague, great mentor",
     "preferredContact": "email",
     "stats": { "daysSinceContact": 62, "goalDays": 30, "nextDue": "2026-02-27" },
-    "relationshipGoal": { "title": "Relationship Goal", "description": "Connect every 30 days" },
-    "quickActions": ["Call", "Text", "Video"],
+    "relationshipGoal": { "title": "Relationship Goal", "description": "30 days" },
+    "quickActions": {"Call" : "Call", "Text" : "Text", "Video" : "Video"},
     "actions": { "snooze": "2 Weeks", "archive": true, "delete": true }
   },
   {
@@ -21,8 +21,8 @@
     "note": "Gym partner",
     "preferredContact": "call",
     "stats": { "daysSinceContact": 10, "goalDays": 30, "nextDue": "2026-05-01" },
-    "relationshipGoal": { "title": "Relationship Goal", "description": "Connect every 30 days" },
-    "quickActions": ["Call", "Text", "Video"],
+    "relationshipGoal": { "title": "Relationship Goal", "description": "30 days" },
+    "quickActions": {"Call" : "Call", "Text" : "Text", "Video" : "Video"},
     "actions": { "snooze": "1 Week", "archive": true, "delete": true }
   },
   {
@@ -34,8 +34,8 @@
     "note": "Project manager",
     "preferredContact": "email",
     "stats": { "daysSinceContact": 45, "goalDays": 20, "nextDue": "2026-03-15" },
-    "relationshipGoal": { "title": "Relationship Goal", "description": "Connect every 20 days" },
-    "quickActions": ["Call", "Text", "Video"],
+    "relationshipGoal": { "title": "Relationship Goal", "description": "20 days" },
+    "quickActions": {"Call" : "Call", "Text" : "Text", "Video" : "Video"},
     "actions": { "snooze": "2 Weeks", "archive": true, "delete": true }
   },
   {
@@ -47,8 +47,8 @@
     "note": "College buddy",
     "preferredContact": "text",
     "stats": { "daysSinceContact": 5, "goalDays": 15, "nextDue": "2026-04-20" },
-    "relationshipGoal": { "title": "Relationship Goal", "description": "Connect every 15 days" },
-    "quickActions": ["Call", "Text", "Video"],
+    "relationshipGoal": { "title": "Relationship Goal", "description": "15 days" },
+    "quickActions": {"Call" : "Call", "Text" : "Text", "Video" : "Video"},
     "actions": { "snooze": "1 Week", "archive": true, "delete": true }
   },
   {
@@ -60,8 +60,8 @@
     "note": "Cousin",
     "preferredContact": "video",
     "stats": { "daysSinceContact": 70, "goalDays": 30, "nextDue": "2026-02-10" },
-    "relationshipGoal": { "title": "Relationship Goal", "description": "Connect every 30 days" },
-    "quickActions": ["Call", "Text", "Video"],
+    "relationshipGoal": { "title": "Relationship Goal", "description": "30 days" },
+    "quickActions": {"Call" : "Call", "Text" : "Text", "Video" : "Video"},
     "actions": { "snooze": "3 Weeks", "archive": true, "delete": true }
   },
   {
@@ -73,8 +73,8 @@
     "note": "Team lead",
     "preferredContact": "email",
     "stats": { "daysSinceContact": 12, "goalDays": 25, "nextDue": "2026-04-30" },
-    "relationshipGoal": { "title": "Relationship Goal", "description": "Connect every 25 days" },
-    "quickActions": ["Call", "Text", "Video"],
+    "relationshipGoal": { "title": "Relationship Goal", "description": "25 days" },
+    "quickActions": {"Call" : "Call", "Text" : "Text", "Video" : "Video"},
     "actions": { "snooze": "1 Week", "archive": true, "delete": true }
   },
   {
@@ -86,8 +86,8 @@
     "note": "Travel partner",
     "preferredContact": "text",
     "stats": { "daysSinceContact": 50, "goalDays": 30, "nextDue": "2026-03-01" },
-    "relationshipGoal": { "title": "Relationship Goal", "description": "Connect every 30 days" },
-    "quickActions": ["Call", "Text", "Video"],
+    "relationshipGoal": { "title": "Relationship Goal", "description": "30 days" },
+   "quickActions": {"Call" : "Call", "Text" : "Text", "Video" : "Video"},
     "actions": { "snooze": "2 Weeks", "archive": true, "delete": true }
   },
   {
@@ -99,8 +99,8 @@
     "note": "Client",
     "preferredContact": "call",
     "stats": { "daysSinceContact": 7, "goalDays": 20, "nextDue": "2026-04-25" },
-    "relationshipGoal": { "title": "Relationship Goal", "description": "Connect every 20 days" },
-    "quickActions": ["Call", "Text", "Video"],
+    "relationshipGoal": { "title": "Relationship Goal", "description": "20 days" },
+    "quickActions": {"Call" : "Call", "Text" : "Text", "Video" : "Video"},
     "actions": { "snooze": "1 Week", "archive": true, "delete": true }
   },
   {
@@ -112,8 +112,8 @@
     "note": "Aunt",
     "preferredContact": "video",
     "stats": { "daysSinceContact": 80, "goalDays": 30, "nextDue": "2026-01-30" },
-    "relationshipGoal": { "title": "Relationship Goal", "description": "Connect every 30 days" },
-    "quickActions": ["Call", "Text", "Video"],
+    "relationshipGoal": { "title": "Relationship Goal", "description": "30 days" },
+   "quickActions": {"Call" : "Call", "Text" : "Text", "Video" : "Video"},
     "actions": { "snooze": "3 Weeks", "archive": true, "delete": true }
   },
   {
@@ -125,8 +125,8 @@
     "note": "Gaming buddy",
     "preferredContact": "text",
     "stats": { "daysSinceContact": 3, "goalDays": 10, "nextDue": "2026-04-18" },
-    "relationshipGoal": { "title": "Relationship Goal", "description": "Connect every 10 days" },
-    "quickActions": ["Call", "Text", "Video"],
+    "relationshipGoal": { "title": "Relationship Goal", "description": "10 days" },
+    "quickActions": {"Call" : "Call", "Text" : "Text", "Video" : "Video"},
     "actions": { "snooze": "1 Week", "archive": true, "delete": true }
   },
   {
@@ -138,8 +138,8 @@
     "note": "HR manager",
     "preferredContact": "email",
     "stats": { "daysSinceContact": 55, "goalDays": 25, "nextDue": "2026-03-05" },
-    "relationshipGoal": { "title": "Relationship Goal", "description": "Connect every 25 days" },
-    "quickActions": ["Call", "Text", "Video"],
+    "relationshipGoal": { "title": "Relationship Goal", "description": "25 days" },
+    "quickActions": {"Call" : "Call", "Text" : "Text", "Video" : "Video"},
     "actions": { "snooze": "2 Weeks", "archive": true, "delete": true }
   },
   {
@@ -151,8 +151,8 @@
     "note": "Neighbor",
     "preferredContact": "call",
     "stats": { "daysSinceContact": 9, "goalDays": 20, "nextDue": "2026-04-28" },
-    "relationshipGoal": { "title": "Relationship Goal", "description": "Connect every 20 days" },
-    "quickActions": ["Call", "Text", "Video"],
+    "relationshipGoal": { "title": "Relationship Goal", "description": "20 days" },
+    "quickActions": {"Call" : "Call", "Text" : "Text", "Video" : "Video"},
     "actions": { "snooze": "1 Week", "archive": true, "delete": true }
   },
   {
@@ -164,8 +164,8 @@
     "note": "Sister",
     "preferredContact": "video",
     "stats": { "daysSinceContact": 65, "goalDays": 30, "nextDue": "2026-02-20" },
-    "relationshipGoal": { "title": "Relationship Goal", "description": "Connect every 30 days" },
-    "quickActions": ["Call", "Text", "Video"],
+    "relationshipGoal": { "title": "Relationship Goal", "description": "30 days" },
+    "quickActions": {"Call" : "Call", "Text" : "Text", "Video" : "Video"},
     "actions": { "snooze": "2 Weeks", "archive": true, "delete": true }
   },
   {
@@ -177,8 +177,8 @@
     "note": "Developer colleague",
     "preferredContact": "text",
     "stats": { "daysSinceContact": 6, "goalDays": 15, "nextDue": "2026-04-22" },
-    "relationshipGoal": { "title": "Relationship Goal", "description": "Connect every 15 days" },
-    "quickActions": ["Call", "Text", "Video"],
+    "relationshipGoal": { "title": "Relationship Goal", "description": "15 days" },
+    "quickActions": {"Call" : "Call", "Text" : "Text", "Video" : "Video"},
     "actions": { "snooze": "1 Week", "archive": true, "delete": true }
   },
   {
@@ -190,8 +190,8 @@
     "note": "School friend",
     "preferredContact": "call",
     "stats": { "daysSinceContact": 48, "goalDays": 20, "nextDue": "2026-03-12" },
-    "relationshipGoal": { "title": "Relationship Goal", "description": "Connect every 20 days" },
-    "quickActions": ["Call", "Text", "Video"],
+    "relationshipGoal": { "title": "Relationship Goal", "description": "20 days" },
+    "quickActions": {"Call" : "Call", "Text" : "Text", "Video" : "Video"},
     "actions": { "snooze": "2 Weeks", "archive": true, "delete": true }
   },
   {
@@ -203,8 +203,8 @@
     "note": "Startup co-founder",
     "preferredContact": "email",
     "stats": { "daysSinceContact": 8, "goalDays": 30, "nextDue": "2026-05-02" },
-    "relationshipGoal": { "title": "Relationship Goal", "description": "Connect every 30 days" },
-    "quickActions": ["Call", "Text", "Video"],
+    "relationshipGoal": { "title": "Relationship Goal", "description": "30 days" },
+    "quickActions": {"Call" : "Call", "Text" : "Text", "Video" : "Video"},
     "actions": { "snooze": "1 Week", "archive": true, "delete": true }
   }
 ]
