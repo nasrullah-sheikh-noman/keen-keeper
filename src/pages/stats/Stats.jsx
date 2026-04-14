@@ -1,11 +1,12 @@
 import React from 'react';
+import Statschart from '../../components/stats/Statschart';
 
 const Stats = () => {
   return (
     <div>
-      <h2>stats</h2>
+      <Statschart/>
     </div>
   );
 };
 
-export default Stats;<h2>stats</h2>
+export default Stats;

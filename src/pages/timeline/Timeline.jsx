@@ -1,11 +1,14 @@
 import React from 'react';
+import Timelineheader from '../../components/timeline/Timelineheader';
+import Timelinedetails from '../../components/timeline/Timelinedetails';
 
 const Timeline = () => {
   return (
     <div>
-      <h2>timeline</h2>
+      <Timelineheader/>
+      <Timelinedetails/>
     </div>
   );
 };
 
-export default Timeline;<h2>timeline</h2>
+export default Timeline;

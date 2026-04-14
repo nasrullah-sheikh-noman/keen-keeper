@@ -8,7 +8,7 @@ const Home = () => {
     <div>
       <Homepagetitle/>
       <Yourfriendscount/>
-      <div className="divider container mx-auto py-4 mt-11"></div>
+      <div className="divider container w-[96%] mx-auto py-4 mt-11"></div>
       <Yourfriends/>
     </div>
   );

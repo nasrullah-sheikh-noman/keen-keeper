@@ -10,7 +10,7 @@ const Homepagetitle = () => {
         <br />
         the relationships that matter most.
       </h4>
-      <button className="btn bg-[#47698F] text-white border-[#35567b] mt-5">
+      <button className="btn bg-[#47698F] text-white border-[#35567b] mt-5 hover:scale-105 transition duration-400">
         <span>
           <HiPlus />
         </span>

@@ -10,12 +10,14 @@ const Navbar = () => {
       <div className=" navbar bg-base-100 border-gray-400 shadow-cyan-400 shadow-md py-4">
         <div className="container mx-auto flex items-center text-center ">
           <div className="navbar-start">
-            <a className="btn btn-ghost text-3xl font-bold gap-0 text-center items-center">
+            <NavLink
+            to="/"
+            className=" text-3xl font-bold gap-0 text-center items-center">
               <span className="text-3xl font-extrabold text-cyan-600">
                 keen
               </span>
               keeper
-            </a>
+            </NavLink>
           </div>
 
           <div className="navbar-end">
@@ -51,8 +53,8 @@ const Navbar = () => {
                     to="/"
                     className={({ isActive }) =>
                       isActive
-                        ? "btn bg-[#47698F] text-white border-[#35567b]"
-                        : "btn border-black"
+                        ? "btn bg-[#47698F] text-white border-[#35567b] hover:scale-105 transition duration-400"
+                        : "btn border-black hover:scale-105 transition duration-400"
                     }
                   >
                     <AiFillHome />
@@ -62,8 +64,8 @@ const Navbar = () => {
                     to="/timeline"
                     className={({ isActive }) =>
                       isActive
-                        ? "btn bg-[#47698F] text-white border-[#35567b]"
-                        : "btn border-black"
+                        ? "btn bg-[#47698F] text-white border-[#35567b] hover:scale-105 transition duration-400"
+                        : "btn border-black hover:scale-105 transition duration-400"
                     }
                   >
                     <RiTimeLine />
@@ -73,8 +75,8 @@ const Navbar = () => {
                     to="/stats"
                     className={({ isActive }) =>
                       isActive
-                        ? "btn bg-[#47698F] text-white border-[#35567b]"
-                        : "btn border-black"
+                        ? "btn bg-[#47698F] text-white border-[#35567b] hover:scale-105 transition duration-400"
+                        : "btn border-black hover:scale-105 transition duration-400"
                     }
                   >
                     <ImStatsDots />
@@ -90,8 +92,8 @@ const Navbar = () => {
                   to="/"
                   className={({ isActive }) =>
                     isActive
-                      ? "btn bg-[#47698F] text-white border-[#35567b]"
-                      : "btn border-black"
+                      ? "btn bg-[#47698F] text-white border-[#35567b] hover:scale-105 transition duration-400"
+                      : "btn border-black hover:scale-105 transition duration-400"
                   }
                 >
                   <AiFillHome />
@@ -101,8 +103,8 @@ const Navbar = () => {
                   to="/timeline"
                   className={({ isActive }) =>
                     isActive
-                      ? "btn bg-[#47698F] text-white border-[#35567b]"
-                      : "btn border-black"
+                      ? "btn bg-[#47698F] text-white border-[#35567b] hover:scale-105 transition duration-400"
+                      : "btn border-black hover:scale-105 transition duration-400"
                   }
                 >
                   <RiTimeLine />
@@ -112,8 +114,8 @@ const Navbar = () => {
                   to="/stats"
                   className={({ isActive }) =>
                     isActive
-                      ? "btn bg-[#47698F] text-white border-[#35567b]"
-                      : "btn border-black"
+                      ? "btn bg-[#47698F] text-white border-[#35567b] hover:scale-105 transition duration-400"
+                      : "btn border-black hover:scale-105 transition duration-400"
                   }
                 >
                   <ImStatsDots />
