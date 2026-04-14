@@ -7,11 +7,11 @@ import { Link, NavLink } from "react-router";
 const Navbar = () => {
   return (
     <div>
-      <div className=" navbar bg-base-100 shadow-sm">
+      <div className=" navbar bg-base-100 border-gray-400 shadow-cyan-400 shadow-md">
         <div className="container mx-auto ">
           <div className="navbar-start">
             <a className="btn btn-ghost text-3xl font-bold gap-0 text-center items-center">
-              <span className="text-3xl font-extrabold text-[#47698F]">
+              <span className="text-3xl font-extrabold text-cyan-600">
                 keen
               </span>
               keeper
