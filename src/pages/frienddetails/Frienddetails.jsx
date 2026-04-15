@@ -1,10 +1,12 @@
-import { use } from "react";
+import { use, useContext } from "react";
 import { FaVideo } from "react-icons/fa";
 import { FiPhoneCall } from "react-icons/fi";
 import { HiMiniArchiveBoxArrowDown } from "react-icons/hi2";
 import { IoMdText } from "react-icons/io";
 import { MdDeleteForever, MdOutlineNotificationsPaused } from "react-icons/md";
 import { Link, useParams } from "react-router";
+import { toast } from "react-toastify";
+import { UserContext } from "../../usercontext/Usercontext";
 
 const friendsPromise = fetch("/data.json").then((res) => res.json());
 
@@ -14,7 +16,27 @@ const Frienddetails = () => {
   const friends = use(friendsPromise);
 
   const expectedfriend = friends.find((friend) => friend.id == id);
-  // console.log("expectedfriend", expectedfriend);
+
+  const { setTimelinevideocall, timelinevideocall } = useContext(UserContext);
+
+  const handlesettimelinevideocall = (friend) => {
+    console.log("friendexvideo", friend);
+
+    const isExitFrind = timelinevideocall.find(
+      (videocall) => videocall.id == friend.id,
+    );
+
+    if (isExitFrind) {
+      toast.error("You already call this person", {
+        position: "bottom-right",
+      });
+    } else {
+      setTimelinevideocall([...timelinevideocall, friend]);
+      toast.success("You join the video call.", {
+        position: "bottom-right",
+      });
+    }
+  };
 
   return (
     <div className="max-w-260 mx-auto border border-gray-300 shadow-cyan-400 shadow-lg pl-4 pb-4 pt-1.5 pr-1.5 my-8 rounded-2xl grid grid-cols-3 gap-2">
@@ -107,7 +129,6 @@ const Frienddetails = () => {
         <div className="border bg-gray-50 border-gray-300 rounded-2xl p-4 grid grid-rows-1">
           <h2 className="text-lg font-medium">Quick Check-In</h2>
           <div className="grid grid-cols-3 gap-4">
-
             <Link className="flex border border-gray-300 p-4 bg-gray-100 rounded-2xl flex-col items-center py-6">
               <span>
                 <FiPhoneCall />
@@ -120,12 +141,17 @@ const Frienddetails = () => {
               {expectedfriend.quickActions.Text}
             </Link>
 
-            <Link className="flex border border-gray-300 p-4 bg-gray-100 rounded-2xl flex-col items-center py-6">
+            <button
+              onClick={() => {
+                handlesettimelinevideocall(expectedfriend);
+              }}
+              className="flex border border-gray-300 p-4 bg-gray-100 rounded-2xl flex-col items-center py-6"
+            >
               <span>
                 <FaVideo />
               </span>
               {expectedfriend.quickActions.Video}
-            </Link>
+            </button>
           </div>
         </div>
       </div>
