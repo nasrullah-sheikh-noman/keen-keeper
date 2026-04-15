@@ -5,7 +5,6 @@ const friendsPromise = fetch("/data.json").then((res) => res.json());
 
 const Yourfriends = () => {
   const friends = use(friendsPromise);
-  console.log("friends", friends);
   return (
     <div className="container mx-auto p-4">
       <h2 className="text-2xl font-semibold">Your Friends ({friends.length})</h2>

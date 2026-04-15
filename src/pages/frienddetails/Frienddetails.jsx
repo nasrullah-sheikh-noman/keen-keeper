@@ -22,7 +22,6 @@ const Frienddetails = () => {
   const { setTimelineaudiocall, timelineaudiocall } = useContext(UserContext);
 
   const handlesettimelinevideocall = (friend) => {
-    console.log("friendexvideo", friend);
 
     const isExitFrind = timelinevideocall.find(
       (videocall) => videocall.id == friend.id,
