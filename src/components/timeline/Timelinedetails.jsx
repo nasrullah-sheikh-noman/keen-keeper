@@ -1,11 +1,10 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { UserContext } from "../../usercontext/Usercontext";
 import Contactdetails from "./Contactdetails";
 import Timelineblank from "./Timelineblank";
 
 const Timelinedetails = () => {
-  const { timelinevideocall, timelinetext, timelineaudiocall } =
-    useContext(UserContext);
+  const { timelinevideocall, timelinetext, timelineaudiocall, filter, setFilter } = useContext(UserContext);
 
   const alltimelines = [
     ...timelinetext.map((item) => ({ ...item, type: "text" })),
@@ -17,7 +16,7 @@ const Timelinedetails = () => {
     (a, b) => new Date(a.stats.nextDue) - new Date(b.stats.nextDue),
   );
 
-const [filter, setFilter] = useState("");
+
  
 
   return (
@@ -28,10 +27,10 @@ const [filter, setFilter] = useState("");
           onClick={(e) => setFilter(e.target.value)}
           className={`select select-accent bg-cyan-50 ${filter == 0 ? "text-gray-400" : "text-black"} text-lg font-medium`}
         >
-          <option value=""  disabled >Filter timeline</option>
-          <option value="text" >All text</option>
-          <option value="audio" >All audio call</option>
-          <option value="video" >All video call</option>
+          <option value="" disabled >Filter timeline</option>
+          <option value="text" className="text-black">All text</option>
+          <option value="audio" className="text-black">All audio call</option>
+          <option value="video" className="text-black">All video call</option>
         </select>
       </div>
 

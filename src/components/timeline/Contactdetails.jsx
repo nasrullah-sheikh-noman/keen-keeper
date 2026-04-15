@@ -1,5 +1,11 @@
+import { useContext } from "react";
+import { UserContext } from "../../usercontext/Usercontext";
+
 const Contactdetails = ({ item }) => {
-  // console.log("item", item);
+
+  const { filter, setFilter } = useContext(UserContext);
+
+  console.log("item", item, "filter", filter, "setFilter", setFilter);
 
   return (
     <div className="bg-gray-100">
