@@ -16,7 +16,8 @@ const Timelinedetails = () => {
     (a, b) => new Date(a.stats.nextDue) - new Date(b.stats.nextDue),
   );
 
-
+  // const [alltext, setAlltext] = useState([]);
+  console.log("filter", filter);
  
 
   return (
@@ -24,10 +25,13 @@ const Timelinedetails = () => {
       <div className="flex justify-center ">
         <select
           defaultValue={filter}
-          onClick={(e) => setFilter(e.target.value)}
+          onClick={(e) => {
+            setFilter(e.target.value)
+          }}
           className={`select select-accent bg-cyan-50 ${filter == 0 ? "text-gray-400" : "text-black"} text-lg font-medium`}
         >
-          <option value="" disabled >Filter timeline</option>
+          {/* <option value="" disabled >Filter timeline</option> */}
+          <option value="all" selected className="text-black">All contact list</option>
           <option value="text" className="text-black">All text</option>
           <option value="audio" className="text-black">All audio call</option>
           <option value="video" className="text-black">All video call</option>
