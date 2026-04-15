@@ -1,46 +1,55 @@
 import { useContext } from "react";
 import { UserContext } from "../../usercontext/Usercontext";
 import Contactdetails from "./Contactdetails";
+import Timelineblank from "./Timelineblank";
 
 const Timelinedetails = () => {
   const { timelinevideocall, timelinetext, timelineaudiocall } =
     useContext(UserContext);
 
-    // const alltimelines = [
-    //   ...timelinetext,
-    //   ...timelineaudiocall,
-    //   ...timelinevideocall,
-    // ];
+  const alltimelines = [
+    ...timelinetext.map((item) => ({ ...item, type: "text" })),
+    ...timelineaudiocall.map((item) => ({ ...item, type: "audio" })),
+    ...timelinevideocall.map((item) => ({ ...item, type: "video" })),
+  ];
+
+  const sortedtimelines = alltimelines.sort(
+    (a, b) => new Date(a.stats.nextDue) - new Date(b.stats.nextDue),
+  );
+
+
+ 
 
   return (
-    <div className="max-w-260 mx-auto mt-5 px-6">
+    <div className="max-w-260 mx-auto mt-5 px-1 sm:px-2 md:px-4 lg:px-6">
       <div className="flex justify-center ">
         <select
           defaultValue="Color scheme"
           className="select select-accent bg-cyan-50 text-lg font-medium"
         >
-          <option disabled={true}>Filter timeline</option>
-          <option>All text</option>
+          {/* <option selected disabled>Filter timeline</option> */}
+          <option selected>All history</option>
+          <option >All text</option>
           <option>All audio call</option>
           <option>All video call</option>
         </select>
       </div>
 
-      <div className=" border-gray-300 rounded-2xl p-3 my-8 bg-gray-50">
-        {/* {
-          timelinetext.map((textfriend, i) => <Contactdetails key={i} textfriend={textfriend}/> )
-        } */}
-        {/* {
-          timelineaudiocall.map((audiofriend, i) => <Contactdetails key={i} audiofriend={audiofriend}/> )
-        }
-        {
-          timelinevideocall.map((videofriend, i) => <Contactdetails key={i} videofriend={videofriend}/> )
-        } */}
+      {
+        sortedtimelines.length != 0 &&
+          <div className="border border-gray-300 rounded-2xl p-6 my-8 bg-gray-50">
+          {sortedtimelines.map((item, i) => (
+            <Contactdetails key={i} item={item} />
+          ))}
+        </div>
+      }
 
-        {/* {
-          alltimelines.map((item, i) => <Contactdetails key={i} item={item}/> )
-        } */}
-      </div>
+
+      {
+        sortedtimelines.length == 0 && 
+        <Timelineblank/>
+      }
+
     </div>
   );
 };

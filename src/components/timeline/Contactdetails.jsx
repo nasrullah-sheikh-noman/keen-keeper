@@ -1,48 +1,52 @@
-
-
-const Contactdetails = ({ textfriend, videofriend, audiofriend }) => {
+const Contactdetails = ({ item }) => {
+  // console.log("item", item);
 
   return (
-    <div  className="bg-gray-100">
+    <div className="bg-gray-100">
+      {item.type === "text" && (
+        <div className="flex gap-4  items-center border border-gray-300 px-5 py-3 rounded-2xl my-6">
+          <div>
+            <img src="/public/assets/text.png" alt="" />
+          </div>
+          <div>
+            <h2 className="text-gray-500 text-medium">
+              <span className="text-xl text-black font-semibold">Text </span>
+              with {item.name}
+            </h2>
+            <h2>{new Date().toLocaleString()}</h2>
+          </div>
+        </div>
+      )}
 
-      <div className="flex gap-4  items-center border border-gray-300 px-5 py-3 rounded-2xl my-6">
-        <div>
-          <img src="/public/assets/text.png" alt="" />
+      {item.type === "audio" && (
+        <div className="flex gap-4  items-center border border-gray-300 px-5 py-3 rounded-2xl my-6">
+          <div>
+            <img src="/public/assets/call.png" alt="" />
+          </div>
+          <div>
+            <h2 className="text-gray-500 text-medium">
+              <span className="text-xl text-black font-semibold">Audio </span>
+              with {item.name}
+            </h2>
+            <h2>{new Date().toLocaleString()}</h2>
+          </div>
         </div>
-        <div>
-          <h2 className="text-gray-500 text-medium">
-            <span className="text-xl text-black font-semibold">Text </span>with{" "}
-            {textfriend.name}
-          </h2>
-          <h2>{new Date().toLocaleString()}</h2>
-        </div>
-      </div>
+      )}
 
-      <div className="flex gap-4  items-center border border-gray-300 px-5 py-3 rounded-2xl my-6">
-        <div>
-          <img src="/public/assets/text.png" alt="" />
+      {item.type === "video" && (
+        <div className="flex gap-4  items-center border border-gray-300 px-5 py-3 rounded-2xl my-6">
+          <div>
+            <img src="/public/assets/video.png" alt="" />
+          </div>
+          <div>
+            <h2 className="text-gray-500 text-medium">
+              <span className="text-xl text-black font-semibold">Video </span>
+              with {item.name}
+            </h2>
+            <h2>{new Date().toLocaleString()}</h2>
+          </div>
         </div>
-        <div>
-          <h2 className="text-gray-500 text-medium">
-            <span className="text-xl text-black font-semibold">Audio </span>with{" "}
-            {audiofriend.name}
-          </h2>
-          <h2>{new Date().toLocaleString()}</h2>
-        </div>
-      </div>
-
-      <div className="flex gap-4  items-center border border-gray-300 px-5 py-3 rounded-2xl my-6">
-        <div>
-          <img src="/public/assets/text.png" alt="" />
-        </div>
-        <div>
-          <h2 className="text-gray-500 text-medium">
-            <span className="text-xl text-black font-semibold">Video </span>with{" "}
-            {videofriend.name}
-          </h2>
-          <h2>{new Date().toLocaleString()}</h2>
-        </div>
-      </div>
+      )}
     </div>
   );
 };
