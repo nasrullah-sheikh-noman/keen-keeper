@@ -71,8 +71,8 @@ const Frienddetails = () => {
   };
 
   return (
-    <div className="p-2 md:p-4">
-      <div className="max-w-260 mx-auto border border-gray-300 shadow-cyan-400 shadow-lg pl-4 pb-4 pt-1.5 pr-1.5 my-8 rounded-2xl grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-2">
+    <div className="p-2 md:p-4 ">
+      <div className="max-w-260 mx-auto border border-gray-300 shadow-cyan-400 shadow-lg pl-12 lg:pl-4 pb-4 pt-1.5 pr-1.5 my-8 rounded-2xl grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-2">
         <div className="col-span-1 grid grid-rows-3">
           <div className="border bg-gray-50 border-gray-300 my-4 md:px-4 lg:px-6 py-8 flex flex-col items-center text-center space-y-3 rounded-2xl row-span-2">
             <img
@@ -118,7 +118,7 @@ const Frienddetails = () => {
           </div>
         </div>
 
-        <div className="col-span-2  grid grid-rows-3 p-3 gap-3 ">
+        <div className="col-span-2  grid grid-rows-3 p-3 gap-3 mr-12 lg:mr-0">
           <div className=" grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
             <div className="border rounded-2xl bg-gray-50 border-gray-300 flex flex-col py-4 space-y-2 justify-center items-center text-center">
               <h1 className="text-3xl font-bold">
