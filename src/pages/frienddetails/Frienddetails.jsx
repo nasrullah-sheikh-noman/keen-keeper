@@ -18,6 +18,8 @@ const Frienddetails = () => {
   const expectedfriend = friends.find((friend) => friend.id == id);
 
   const { setTimelinevideocall, timelinevideocall } = useContext(UserContext);
+  const { setTimelinetext, timelinetext } = useContext(UserContext);
+  const { setTimelineaudiocall, timelineaudiocall } = useContext(UserContext);
 
   const handlesettimelinevideocall = (friend) => {
     console.log("friendexvideo", friend);
@@ -27,12 +29,44 @@ const Frienddetails = () => {
     );
 
     if (isExitFrind) {
-      toast.error("You already call this person", {
+      toast.error(`You already call ${friend.name}`, {
         position: "bottom-right",
       });
     } else {
       setTimelinevideocall([...timelinevideocall, friend]);
-      toast.success("You join the video call.", {
+      toast.success(`Video with ${friend.name}`, {
+        position: "bottom-right",
+      });
+    }
+  };
+
+  const handlesetTimelinetext = (friend) => {
+    const isExitFrind = timelinetext.find((text) => text.id == friend.id);
+
+    if (isExitFrind) {
+      toast.error(`You already text ${friend.name}`, {
+        position: "bottom-right",
+      });
+    } else {
+      setTimelinetext([...timelinetext, friend]);
+      toast.success(`Text with ${friend.name}`, {
+        position: "bottom-right",
+      });
+    }
+  };
+
+  const handlesetTimelineaudiocall = (friend) => {
+    const isExitFrind = timelineaudiocall.find(
+      (audiocall) => audiocall.id == friend.id,
+    );
+
+    if (isExitFrind) {
+      toast.error(`You already audio call ${friend.name}`, {
+        position: "bottom-right",
+      });
+    } else {
+      setTimelineaudiocall([...timelineaudiocall, friend]);
+      toast.success(`Audio call with ${friend.name}`, {
         position: "bottom-right",
       });
     }
@@ -129,23 +163,33 @@ const Frienddetails = () => {
         <div className="border bg-gray-50 border-gray-300 rounded-2xl p-4 grid grid-rows-1">
           <h2 className="text-lg font-medium">Quick Check-In</h2>
           <div className="grid grid-cols-3 gap-4">
-            <Link className="flex border border-gray-300 p-4 bg-gray-100 rounded-2xl flex-col items-center py-6">
+            <button
+              onClick={() => {
+                handlesetTimelineaudiocall(expectedfriend);
+              }}
+              className="cursor-pointer flex border border-gray-300 p-4 bg-gray-100 rounded-2xl flex-col items-center py-6"
+            >
               <span>
                 <FiPhoneCall />
               </span>
               {expectedfriend.quickActions.Call}
-            </Link>
+            </button>
 
-            <Link className="flex border border-gray-300 p-4 bg-gray-100 rounded-2xl flex-col items-center py-6">
+            <button
+              onClick={() => {
+                handlesetTimelinetext(expectedfriend);
+              }}
+              className="flex cursor-pointer border border-gray-300 p-4 bg-gray-100 rounded-2xl flex-col items-center py-6"
+            >
               <IoMdText />
               {expectedfriend.quickActions.Text}
-            </Link>
+            </button>
 
             <button
               onClick={() => {
                 handlesettimelinevideocall(expectedfriend);
               }}
-              className="flex border border-gray-300 p-4 bg-gray-100 rounded-2xl flex-col items-center py-6"
+              className="flex cursor-pointer border border-gray-300 p-4 bg-gray-100 rounded-2xl flex-col items-center py-6"
             >
               <span>
                 <FaVideo />
