@@ -2,7 +2,6 @@
 
 A modern contact management web application built with React.js that allows users to interact with contacts through text, audio, and video calls. It features dynamic routing, filtering options, and data visualization for tracking communication history in an intuitive way. The project focuses on delivering a responsive UI and smooth user experience using modern frontend tools.
 
---
 
 ## 🛠️ Technology used
 - React.js
@@ -13,7 +12,6 @@ A modern contact management web application built with React.js that allows user
 - HTML5
 - Recharts
 
---
 
 ## ✨ Features
 - 🔹 Any card click to show all details of this person.
@@ -22,7 +20,6 @@ A modern contact management web application built with React.js that allows user
 - 🔹 You can filter all text, all audio & all video using select option dropdown in timeline page.
 - 🔹 You can see all call & text history of chart modern way to stats page.
 
--- 
 
 ## 🚀 Core Functionalities & Implementation
 - 🔺 Dynamic Routing System
@@ -34,12 +31,11 @@ A modern contact management web application built with React.js that allows user
 - 🔺 Event Handling & User Interaction
 - 🔺 Responsive UI Design
 
--- 
 
 ## 🔗 Live Link 
 https://keen-keeper-livid.vercel.app/
 
---
+
 
 ## 📂 Installation & Setup
 Follow these steps to run the project locally:
@@ -58,7 +54,6 @@ npm install
 npm run dev
 ```
 
----
 
 ## 👤 Author
 
