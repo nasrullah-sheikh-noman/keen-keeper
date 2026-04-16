@@ -1,10 +1,12 @@
 import React from 'react';
-import Statschart from '../../components/stats/Statschart';
+import Statstitle from '../../components/stats/statstitle';
+import Chart from '../../components/stats/Chart';
 
 const Stats = () => {
   return (
     <div>
-      <Statschart/>
+      <Statstitle/>
+      <Chart/>
     </div>
   );
 };

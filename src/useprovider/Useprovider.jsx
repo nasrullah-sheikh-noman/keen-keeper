@@ -8,7 +8,7 @@ const Useprovider = ({children}) => {
   const [timelinevideocall, setTimelinevideocall] = useState([]);
   const [timelineaudiocall, setTimelineaudiocall] = useState([]);
   const [timelinetext, setTimelinetext] = useState([]);
-  const [filter, setFilter] = useState("");
+  const [filter, setFilter] = useState("all");
 
   return (
     <UserContext.Provider value={{setTimelinevideocall, timelinevideocall, timelineaudiocall, setTimelineaudiocall, timelinetext, setTimelinetext, filter,setFilter}}>
