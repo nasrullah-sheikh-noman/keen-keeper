@@ -3,9 +3,8 @@ import { UserContext } from "../../usercontext/Usercontext";
 import { useContext } from "react";
 
 const Chart = () => {
-
   const { timelinevideocall, timelinetext, timelineaudiocall } =
-        useContext(UserContext);
+    useContext(UserContext);
 
   const data = [
     { name: "Text", value: timelinetext.length, fill: "red" },
@@ -14,7 +13,7 @@ const Chart = () => {
   ];
 
   return (
-    <div className="m-4">
+    <div className="m-4 mb-24">
       <div className="max-w-250 mx-auto p-3 sm:p-6 md:p-8 lg:p-11 border border-gray-300 rounded-2xl bg-gray-50 ">
         <h2 className="text-gray-500 text-xl">By Interaction Type</h2>
         <div className=" flex justify-center items-center my-11">
@@ -39,7 +38,11 @@ const Chart = () => {
               dataKey="value"
               isAnimationActive={true}
             />
-            <Legend />
+            <Legend
+              wrapperStyle={{
+                paddingTop: "40px",
+              }}
+            />
             <Tooltip />
           </PieChart>
         </div>

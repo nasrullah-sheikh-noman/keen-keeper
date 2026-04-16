@@ -7,7 +7,7 @@ const Contactdetails = ({ item }) => {
   console.log("item", item, "filter", filter);
 
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-100 ">
       {item.type === "text" && filter == "text" && (
         <div className="flex gap-4  items-center border border-gray-300 px-5 py-3 rounded-2xl my-6">
           <div>

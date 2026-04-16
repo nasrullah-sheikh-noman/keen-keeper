@@ -40,7 +40,7 @@ const Timelinedetails = () => {
 
       {
         sortedtimelines.length != 0 &&
-          <div className="border border-gray-300 rounded-2xl p-6 my-8 bg-gray-50">
+          <div className="border border-gray-300 rounded-2xl p-6 my-8 bg-gray-50 mb-24">
           {sortedtimelines.map((item, i) => (
             <Contactdetails key={i} item={item} />
           ))}
