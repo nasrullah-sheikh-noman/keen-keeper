@@ -1,6 +1,6 @@
 #  Keen Keeper
 
-###  A modern contact management web application built with React.js that allows users to interact with contacts through text, audio, and video calls. It features dynamic routing, filtering options, and data visualization for tracking communication history in an intuitive way. The project focuses on delivering a responsive UI and smooth user experience using modern frontend tools.
+A modern contact management web application built with React.js that allows users to interact with contacts through text, audio, and video calls. It features dynamic routing, filtering options, and data visualization for tracking communication history in an intuitive way. The project focuses on delivering a responsive UI and smooth user experience using modern frontend tools.
 
 --
 
