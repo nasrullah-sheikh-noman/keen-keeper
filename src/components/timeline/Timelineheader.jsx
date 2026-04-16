@@ -7,7 +7,7 @@ const Timelineheader = () => {
       useContext(UserContext);
 
   return (
-    <div className='max-w-260 mx-auto mt-8 p-4'>
+    <div className='max-w-270 mx-auto mt-8 px-12 md:px-16 lg:px-4 xl:p-0 py-4'>
 
       <h2 className='text-4xl font-bold'>Timeline</h2>
 
